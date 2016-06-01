@@ -10,11 +10,22 @@
 		<div id ="container" class="thumbnail" />
 			<h1>Formulario de Inscrição do Centro Interesse</h1>
 			<form>
-				<h2>Nome<INPUT TYPE="text" placeholder=Insira... SIZE="70" MAXLENGTH="70" id="nome" /><br></h2>
-				<h2>Código do Aluno
-				<INPUT TYPE="number" min="0" max="100" SIZE="78" MAXLENGTH="60" id="quantidadedevagas" />
-				E-Mail
-				<INPUT TYPE="text" placeholder=Ex.:testeteste@(gmail/hotmail/live/outlook).com SIZE="46" MAXLENGTH="60" id="email" /><br></h2>
+				<h2>
+				<form id="formulario" action="inscricao.php" role="form">
+			<div class="form-group">
+				<label for="txt_codigo">Nome:</label>
+				<input type="text"
+					class="form-control" id="txt_codigo" /></h2>
+				<form id="formulario" action="inscricao.php" role="form">
+			<div class="form-group">
+				<label for="txt_codigo">Código do aluno:</label>
+				<input type="text"
+					class="form-control" id="txt_codigo" /></h2>
+				<form id="formulario" action="inscricao.php" role="form">
+			<div class="form-group">
+				<label for="txt_codigo">E-mail:</label>
+				<input type="text"
+					class="form-control" id="txt_codigo" /></h2>
 				<h2>Centro de Interesse 1
 				<SELECT ID= "centrodeinsteresse" style="width: 600px">
 					<OPTION VALUE="Insira...">Insira... </option>
