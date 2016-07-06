@@ -1,15 +1,15 @@
 #container-um{
-	background-color: rgb(146,148,218);
+	background-image: url(images1.jpg);
 	width: 80%;
-	height: 90%;
+	height: 95%;
 	margin: 0px auto 0px auto;
-	border-color: black;
+	border-color: white;
 	border-style: solid;
 	border-width: 1px;
-	font-family: "Bradley Hand ITC";
+	font-family: "Glyphicons Halflings";
 }
 #container-dois{
-	background-color: rgb(146,148,219);
+	background-image: url(images1.jpg);
 	width: 95%;
 	height: 15%;
 	margin: 0px auto 0px auto;
@@ -21,7 +21,7 @@
 
 body {
 	background-color: black;
-	font-family: "Bradley Hand ITC";
+	font-family: "Glyphicons Halflings";
 }
 
 h1 {
@@ -32,31 +32,37 @@ h1 {
 }
 input::-webkit-input-placeholder{
 	color: black;
-	font-family: "Bradley Hand ITC";
+	font-family: "Glyphicons Halflings";
 	font-size: 13px;
 }
 h2 {
-	font-family: "Bradley Hand ITC";
-	font-size: 20px;
+	font-family: "Glyphicons Halflings";
+	font-size: 15px;
+	text-align: center;
 }
 
 input#txt_nome{
 	width: 100%;
-	font-size: 32px;
+	font-size: 15px;
+	font-family: "Glyphicons Halflings";
 }
 input#txt_codigo{
 	width: 100%;
-	font-size: 32px;
+	font-size: 15px;
+	font-family: "Glyphicons Halflings";
 }
 input#txt_email{
 	width: 100%;
-	font-size: 32px;
+	font-size: 15px;
+	font-family: "Glyphicons Halflings";
 }
-input#centrodeinsteresse-um{
+select#centrodeinsteresse-um{
 	width: 100%;
-	font-size: 50px;
+	font-size: 15px;
+	font-family: "Glyphicons Halflings";
 }
-input#centrodeinsteresse-dois{
+select#centrodeinsteresse-dois{
 	width: 100%;
-	font-size: 50px;
+	font-size: 15px;
+	font-family: "Glyphicons Halflings";
 }
