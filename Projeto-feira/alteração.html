@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<meta charset="utf-8"> </meta>
+		<title>Alteração do Centro de Interesse</title>
+		<link href="bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"> </link>
+		<script src="bootstrap-3.3.6/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head> 
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="container">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#">Bootstrap theme</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+			  <ul class="nav navbar-nav">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li role="separator" class="divider"></li>
+					<li class="dropdown-header">Nav header</li>
+					<li><a href="#">Separated link</a></li>
+					<li><a href="#">One more separated link</a></li>
+				  </ul>
+				</li>
+			  </ul>
+			</div>
+		  </div>
+		</nav>
+		<div id ="container">
+			<h1>Formulario De Alteração do Centro de Interesse</h1> <br>
+			<form>
+				<h2>Nome Do Centro de Interesse 1
+				<SELECT ID="centrodeinteresse"   style="width: 530px">
+					<OPTION VALUE="Insira...">Insira... </option>
+					<OPTION VALUE="musica">Música </option>
+					<OPTION VALUE="teatro">Teatro </option>
+					<OPTION VALUE="espanhol">Espanhol </option>
+					<OPTION VALUE="ingles">Inglês </option>
+					<OPTION VALUE="Dança">Dança </option>
+					<OPTION VALUE="futsal">Futsal </option>
+					</option>
+				</SELECT><br></h2>
+				
+				<h2>Editar Orientador
+				<INPUT TYPE="text" placeholder=Insira... SIZE="68" MAXLENGTH="60" id="orientador" /><br></h2>
+				<h2>Editar Horario de Inicio
+				<INPUT TYPE="time" id="horainicio" />
+				Editar Horario de Termino
+				<INPUT TYPE="time" SIZE="26" MAXLENGTH="60" id="horafim" /><br></h2>
+				<h2>Editar Quantidade de vagas
+				<INPUT TYPE="number" min="0" max="100" SIZE="78" MAXLENGTH="60" id="quantidadedevagas" /><br></h2>
+				<h2><INPUT TYPE="checkbox" NAME="TERMO DE DECLARAÇÃO" VALUE="IE3" />Declaro estar ciente dos termos de declaração citados.<br></h2>
+				<h2><INPUT TYPE="button" VALUE="CANCELAR" class="btn btn-danger" />
+				<INPUT TYPE="submit" VALUE="CONFIRMAR" class="btn btn-success" /></h2>
+			</form></font>
+		</div>
+	</body> 
+</html>

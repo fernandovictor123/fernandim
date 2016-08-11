@@ -1,0 +1,17 @@
+!SESSION 2016-06-01 08:25:16.291 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.php.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.php.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-06-01 08:25:52.135
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\aluno.labwbs14'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 4 4 2016-06-01 08:30:52.998
+!MESSAGE Conflicting handlers for org.eclipse.dltk.ui.edit.text.script.refactor.quickMenu: {org.eclipse.dltk.internal.ui.actions.refactoring.RefactorActionGroup$3@6f749a1f} vs {org.eclipse.dltk.internal.ui.actions.refactoring.RefactorActionGroup$3@48900d4a}
