@@ -16,4 +16,7 @@
 	
 	$banco = mysql_select_db($nome_banco, $conexão);
 	
+	if (!$conn) {echo "Nao foi possivel conectar ao banco MySQL."; exit;}
+	else {echo "Parabens!! A conexao ao banco de dados ocorreu normalmente!.";}
+	mysql_close();
 ?>
