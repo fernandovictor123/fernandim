@@ -1,7 +1,7 @@
 <?php
 	echo "GET:" . var_dump($_GET) . "<br>";
 	echo "POST:" . var_dump($_POST) . "<br>";
-	echo "posicao nome" . $_POST['nome'];
+
 	
 	
 	/*configuração de endereçamento do banco de dados*/
@@ -12,11 +12,15 @@
 	/*configuração de acesso do banco de dados*/
 	$nome_banco = "bd_centro_interesse";
 	
-	$conexão = mysql_connect($servidor, $usuario, $senha);
+	$conexao = mysql_connect($servidor, $usuario, $senha);
 	
-	$banco = mysql_select_db($nome_banco, $conexão);
+	$banco = mysql_select_db($nome_banco, $conexao);
 	
-	if (!$conn) {echo "Nao foi possivel conectar ao banco MySQL."; exit;}
-	else {echo "Parabens!! A conexao ao banco de dados ocorreu normalmente!.";}
+	if (!$conexao) {
+		echo "Nao foi possivel conectar ao banco MySQL."; 
+		exit;
+	}else{ 
+		echo "Parabens!! A conexao ao banco de dados ocorreu normalmente!";
+	}
 	mysql_close();
 ?>
