@@ -12,37 +12,36 @@
 			Inscrição do Centro Interesse</h1></div>
 		<form id="formulario" action="salvarinscricao.php" role="form" method="POST">
 			<div class="form-group">
-				<label for="txt_nome"><span class="glyphicon glyphicon-text-background" aria-hidden="true" ></span> NOME:</label> <input type="text" class="form-control" id="txt_nome" />
+				<label for="txt_nome"><span class="glyphicon glyphicon-text-background" aria-hidden="true" ></span> NOME:</label> <input type="text" class="form-control" id="txt_nome" name="nome"/>
 			</div>
 			<div class="form-group">
-				<label for="txt_codigo"><span class="glyphicon glyphicon-barcode" aria-hidden="true"></span> CÓDIGO DO ALUNO:</label> <input type="text"
-					class="form-control" id="txt_codigo" />
+				<label for="txt_codigo"><span class="glyphicon glyphicon-barcode" aria-hidden="true"></span> CÓDIGO DO ALUNO:</label> <input type="text" class="form-control" id="txt_codigo"  name="meucodigo"/>
 			</div>
 			<div class="form-group">
-				<label for="txt_email"><span class="glyphicon glyphicon-envelope"> </span>E-MAIL:</label> <input type="text" class="form-control" id="txt_email">
+				<label for="txt_codigo"><span class="glyphicon glyphicon-education" aria-hidden="true"></span> TURMA:</label> <input type="text" class="form-control" id="txt_turma"  name="turma"/>
 			</div>
 			<div class="form-group">
-				<label for="centrodeinsteresse-um"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>CENTRO DE INTERESSE 1:</label> <SELECT
-					class="form-control" ID="centrodeinsteresse-um">
+				<label for="centrodeinsteresse-um"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> CENTRO DE INTERESSE 1:</label> <SELECT
+					class="form-control" ID="centrodeinsteresse-um" name="opcao1">
 					<OPTION VALUE="Insira...">Insira...</option>
-					<OPTION VALUE="musica">Música</option>
-					<OPTION VALUE="teatro">Teatro</option>
-					<OPTION VALUE="espanhol">Espanhol</option>
-					<OPTION VALUE="ingles">Inglês</option>
-					<OPTION VALUE="Dança">Dança</option>
-					<OPTION VALUE="futsal">Futsal</option>
+					<OPTION VALUE="0">Música</option>
+					<OPTION VALUE="1">Teatro</option>
+					<OPTION VALUE="2">Espanhol</option>
+					<OPTION VALUE="3">Inglês</option>
+					<OPTION VALUE="4">Dança</option>
+					<OPTION VALUE="5">Futsal</option>
 				</SELECT>
 			</div>
 			<div class="form-group">
-				<label for="centrodeinsteresse-dois"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>CENTRO DE INTERESSE 2:</label>
-				<SELECT class="form-control" ID="centrodeinsteresse-dois">
+				<label for="centrodeinsteresse-dois"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span> CENTRO DE INTERESSE 2:</label>
+				<SELECT class="form-control" ID="centrodeinsteresse-dois" name="opcao2">
 					<OPTION VALUE="Insira...">Insira...</option>
-					<OPTION VALUE="musica">Música</option>
-					<OPTION VALUE="teatro">Teatro</option>
-					<OPTION VALUE="espanhol">Espanhol</option>
-					<OPTION VALUE="ingles">Inglês</option>
-					<OPTION VALUE="Dança">Dança</option>
-					<OPTION VALUE="futsal">Futsal</option>
+					<OPTION VALUE="0">Música</option>
+					<OPTION VALUE="1">Teatro</option>
+					<OPTION VALUE="2">Espanhol</option>
+					<OPTION VALUE="3">Inglês</option>
+					<OPTION VALUE="4">Dança</option>
+					<OPTION VALUE="5">Futsal</option>
 				</SELECT><br>
 			</div>
 			<h2>
