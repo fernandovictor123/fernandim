@@ -3,9 +3,10 @@
 	echo var_dump($_POST) . "POST <br>";
 	$nome = $_POST['nome'];
 	$codigo=  $_POST['meucodigo'];
+	$turma = $_POST['turma'];
 	$opcao1 = $_POST['opcao1'];
 	$opcao2 = $_POST['opcao2'];
-	$opcao2 = $_POST['turma'];
+	
 	
 	
 	//Buscar a Quantidade de vagas do centro 1
@@ -43,7 +44,7 @@
 	/*Selecione o banco de dados ou morra*/
 	$banco = mysql_select_db($nome_banco, $conexao) or die ("Não foi possível conectar ao banco de dados");
 	
-	$comandosql = "INSERT INTO tb_inscricao VALUES ('',$codigo, '$nome', '$turma', 1, 2, '2016-08-24', '07:10:00')";
+	$comandosql = "INSERT INTO tb_inscricao VALUES ('','$codigo', '$nome', '$turma', '$opcao1','$opcao2', '2016-08-24', '07:10:00')";
 	
 	echo $comandosql;
 	
