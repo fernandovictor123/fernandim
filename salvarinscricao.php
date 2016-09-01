@@ -46,10 +46,10 @@
 		$error = "MySQL error ".mysql_errno().": ".mysql_error()."\n<br>Quando executou:<br>\n$comandosql\n<br>";
 		echo $error;
 	}
-	
-	
 	$itembancodados = mysql_fetch_array($resultado);
 	$qtdevagas1 = $itembancodados['quantidade_vagas'];
+	
+	
 	$comandosql = "SELECT count(*) as total FROM tb_inscricao WHERE opcao_um=".$opcao1;
 	$resultado = mysql_query($comandosql);
 	$itembancodados = mysql_fetch_assoc($resultado);
