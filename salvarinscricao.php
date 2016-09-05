@@ -110,10 +110,7 @@
 		echo "<h1>Esse código do aluno ja esta cadastrado, tente novamente</h1>";
 		echo "<a href='inscricao.html'>Clique aqui para voltar</a>";
 		$podeinserir=false;
-	}
-	
-	
-	
+	}	
 	if($podeinserir){	
 
 		$comandosql = "INSERT INTO tb_inscricao VALUES ('','$codigo', '$nome', '$turma', '$opcao1','$opcao2', '2016-08-24', '07:10:00')";		
