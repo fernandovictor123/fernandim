@@ -1,3 +1,4 @@
+<?php include 'conexao.php'; ?>
 <html>
 <head>
 <meta charset="utf-8"></meta>
@@ -64,28 +65,34 @@
 					DE INTERESSE 1:</label> <SELECT class="form-control"
 					ID="centrodeinsteresse-um" name="opcao1">
 					<OPTION VALUE="0">Insira...</option>
+					<?php
+    					$query = "SELECT * FROM tb_centro_interesse WHERE horario_inicio='12:30:00'";
+   						$result = mysql_query($query);
+    					while($resultado = mysql_fetch_row($result)){
+							echo "<OPTION VALUE='".$resultado[0]."'>".$resultado[1]."</option>";
+    					}
+					?>
+					
+					
 
-					<OPTION VALUE="1">Música</option>
-					<OPTION VALUE="2">Teatro</option>
-					<OPTION VALUE="3">Espanhol</option>
-					<OPTION VALUE="4">Inglês</option>
-					<OPTION VALUE="5">Dança</option>
-					<OPTION VALUE="6">Futsal</option>
 
 				</SELECT>
 			</div>
 			<div class="form-group">
 				<label for="centrodeinsteresse-dois"><span
 					class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-					CENTRO DE INTERESSE 2:</label> <SELECT class="form-control"
+					CENTRO DE INTERESSE 2:</label> 
+					
+				<SELECT class="form-control"
 					ID="centrodeinsteresse-dois" name="opcao2">
 					<OPTION VALUE="0">Insira...</option>
-					<OPTION VALUE="1">Música</option>
-					<OPTION VALUE="2">Teatro</option>
-					<OPTION VALUE="3">Espanhol</option>
-					<OPTION VALUE="4">Inglês</option>
-					<OPTION VALUE="5">Dança</option>
-					<OPTION VALUE="6">Futsal</option>
+					<?php
+    					$query = "SELECT * FROM tb_centro_interesse WHERE horario_inicio='14:10:00'";
+   						$result = mysql_query($query);
+    					while($resultado = mysql_fetch_row($result)){
+							echo "<OPTION VALUE='".$resultado[0]."'>".$resultado[1]."</option>";
+    					}
+					?>
 				</SELECT><br>
 			</div>
 			<h2>
