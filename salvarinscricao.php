@@ -12,10 +12,12 @@
 	$opcao2 = $_POST['opcao2'];
 	
 	include 'conexao.php';
+	
+	
 	/*Quantidade de vagas no centro 1*/
 	
 	
-	$comandosql = "SELECT  quantidade_vagas FROM tb_centro_interesse WHERE id_centro_interesse = ".$opcao1;
+	$comandosql = "SELECT  quantidade_vagas, tipo FROM tb_centro_interesse WHERE id_centro_interesse = ".$opcao1;
 	$resultado = mysql_query($comandosql);
 	
 	if (mysql_errno()) {
@@ -24,6 +26,7 @@
 	}
 	$itembancodados = mysql_fetch_array($resultado);
 	$qtdevagas1 = $itembancodados['quantidade_vagas'];
+	$tipo1 = $itembancodados['tipo'];
 	
 	
 	$comandosql = "SELECT count(*) as total FROM tb_inscricao WHERE opcao_um=".$opcao1;
@@ -38,7 +41,7 @@
 	} 
 		
 	/*Quantidade de vagas no centro 2*/
-	$comandosql = "SELECT  quantidade_vagas FROM tb_centro_interesse WHERE id_centro_interesse = ".$opcao2;
+	$comandosql = "SELECT  quantidade_vagas, tipo FROM tb_centro_interesse WHERE id_centro_interesse = ".$opcao2;
 	$resultado = mysql_query($comandosql);
 	
 	if (mysql_errno()) {
@@ -47,6 +50,7 @@
 	}
 	$itembancodados = mysql_fetch_array($resultado);
 	$qtdevagas2 = $itembancodados['quantidade_vagas'];
+	$tipo2 = $itembancodados['tipo'];
 	
 	$comandosql = "SELECT count(*) as total FROM tb_inscricao WHERE opcao_dois=".$opcao2;
 	$resultado = mysql_query($comandosql);
@@ -62,7 +66,15 @@
 	
 	if ($qtdeinscritosc2 >= $qtdevagas2){
 		echo "<h1>Não existem vagas na sua segunda opção, tente novamente</h1>";
-		echo "<a href='inscricao.html'>Clique aqui para voltar</a>";
+		echo "<a href='inscricao.php'>Clique aqui para voltar</a>";
+		$podeinserir=false;
+	}
+	
+	
+	
+	if ($tipo1 == $tipo2){
+		echo "<h1>Selecione opções diferentes</h1>";
+		echo "<a href='inscricao.php'>Clique aqui para voltar</a>";
 		$podeinserir=false;
 	}
 	
@@ -79,14 +91,15 @@
 	
 	$comandosql = "SELECT count(*) as total FROM tb_inscricao WHERE código_aluno=".$codigo;
 	$resultado = mysql_query($comandosql);
-	$itembancodados = mysql_fetch_assoc($resultado);
+	$itembancodados = mysql_fetch_array($resultado);
 	$qtdecodigodoaluno = $itembancodados['total'];
 
 	if ($qtdecodigodoaluno >=1 ){
 		echo "<h1>Esse código do aluno ja esta cadastrado, tente novamente</h1>";
 		echo "<a href='inscricao.html'>Clique aqui para voltar</a>";
 		$podeinserir=false;
-	}	
+	}
+	
 	if($podeinserir){	
 
 		$comandosql = "INSERT INTO tb_inscricao VALUES ('','$codigo', '$nome', '$turma', '$opcao1','$opcao2', '2016-08-24', '07:10:00')";		
