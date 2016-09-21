@@ -7,6 +7,7 @@
 	</head>
 	<body>
 		<div id="container-tres" class="thumbnail">
+			<div id="container-quatro" class="thumbnail">
 <?php
 	$podeinserir=true;
 	
@@ -40,7 +41,7 @@
 	
 	if ($qtdeinscritosc1 >= $qtdevagas1){
 		echo "<h1>Não existem vagas na sua primeira opção, tente novamente</h1>";
-		echo "<a href='inscricao.html'>Clique aqui para voltar</a>";
+		echo "<a href='inscricao.php'>Clique aqui para voltar</a>";
 		$podeinserir=false;
 	} 
 		
@@ -90,7 +91,7 @@
 
 	if ($qtdecodigodoaluno >=1 ){
 		echo "<h1>Esse código do aluno ja esta cadastrado, tente novamente</h1>";
-		echo "<a href='inscricao.html'>Clique aqui para voltar</a>";
+		echo "<a href='inscricao.php'>Clique aqui para voltar</a>";
 		$podeinserir=false;
 	}
 	
@@ -107,11 +108,12 @@
 		  echo $error; 
 		}else{
 			echo "<h1>Cadastro Realizado com sucesso</h1>";
-			echo "<a href='inscricao.html'>Clique aqui para realizar uma nova inscricao</a>";
+			echo "<a href='inscricao.php'>Clique aqui para realizar uma nova inscricao</a>";
 		}
 	}
 	mysql_close();
 ?>
+			</div>
 			</div>
 		</div>
 	</body>
