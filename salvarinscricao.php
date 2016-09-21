@@ -1,20 +1,24 @@
-<html>
+ï»¿<html>
 	<head>
-		<meta charset="utf-8"></meta>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link href="bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
+		<script src="bootstrap-3.3.6/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css" />
 	</head>
-</html>
+	<body>
+		<div id="container-tres" class="thumbnail">
 <?php
 	$podeinserir=true;
+	
 	$nome = $_POST['nome'];
 	$codigo=  $_POST['meucodigo'];
 	$turma = $_POST['turma'];
 	$opcao1 = $_POST['opcao1'];
 	$opcao2 = $_POST['opcao2'];
 	
+	
 	include 'conexao.php';
 	
-	
-	/*Quantidade de vagas no centro 1*/
 	
 	
 	$comandosql = "SELECT  quantidade_vagas, tipo FROM tb_centro_interesse WHERE id_centro_interesse = ".$opcao1;
@@ -35,12 +39,12 @@
 	$qtdeinscritosc1 = $itembancodados['total'];
 	
 	if ($qtdeinscritosc1 >= $qtdevagas1){
-		echo "<h1>Não existem vagas na sua primeira opção, tente novamente</h1>";
+		echo "<h1>NÃ£o existem vagas na sua primeira opÃ§Ã£o, tente novamente</h1>";
 		echo "<a href='inscricao.html'>Clique aqui para voltar</a>";
 		$podeinserir=false;
 	} 
 		
-	/*Quantidade de vagas no centro 2*/
+
 	$comandosql = "SELECT  quantidade_vagas, tipo FROM tb_centro_interesse WHERE id_centro_interesse = ".$opcao2;
 	$resultado = mysql_query($comandosql);
 	
@@ -65,7 +69,7 @@
 	
 	
 	if ($qtdeinscritosc2 >= $qtdevagas2){
-		echo "<h1>Não existem vagas na sua segunda opção, tente novamente</h1>";
+		echo "<h1>NÃ£o existem vagas na sua segunda opÃ§Ã£o, tente novamente</h1>";
 		echo "<a href='inscricao.php'>Clique aqui para voltar</a>";
 		$podeinserir=false;
 	}
@@ -73,29 +77,19 @@
 	
 	
 	if ($tipo1 == $tipo2){
-		echo "<h1>Selecione opções diferentes</h1>";
+		echo "<h1>Selecione opÃ§Ãµes diferentes</h1>";
 		echo "<a href='inscricao.php'>Clique aqui para voltar</a>";
 		$podeinserir=false;
 	}
 	
-	/*verifique o codigo do aluno*/
-// 	$comandosql = "SELECT código_aluno FROM tb_inscricao WHERE código_aluno = ".$codigo;
-// 	$resultado = mysql_query($comandosql);
-	
-// 	if (mysql_errno()) {
-// 		$error = "MySQL error ".mysql_errno().": ".mysql_error()."\n<br>Quando executou:<br>\n$comandosql\n<br>";
-// 		echo $error;
-// 	}
-// 	$itembancodados = mysql_fetch_array($resultado);
-// 	$codigodatabela = $itembancodados['código_aluno'];
-	
-	$comandosql = "SELECT count(*) as total FROM tb_inscricao WHERE código_aluno=".$codigo;
+
+	$comandosql = "SELECT count(*) as total FROM tb_inscricao WHERE codigo_aluno=".$codigo;
 	$resultado = mysql_query($comandosql);
-	$itembancodados = mysql_fetch_array($resultado);
+	$itembancodados = mysql_fetch_assoc($resultado);
 	$qtdecodigodoaluno = $itembancodados['total'];
 
 	if ($qtdecodigodoaluno >=1 ){
-		echo "<h1>Esse código do aluno ja esta cadastrado, tente novamente</h1>";
+		echo "<h1>Esse cÃ³digo do aluno ja esta cadastrado, tente novamente</h1>";
 		echo "<a href='inscricao.html'>Clique aqui para voltar</a>";
 		$podeinserir=false;
 	}
@@ -106,7 +100,7 @@
 		 $comandosql;
 		
 		$resultado = mysql_query($comandosql);
-		/*Encerra a conexao*/
+
 		
 		if (mysql_errno()) { 
 		  $error = "MySQL error ".mysql_errno().": ".mysql_error()."\n<br>Quando executou:<br>\n$comandosql\n<br>"; 
@@ -118,3 +112,7 @@
 	}
 	mysql_close();
 ?>
+			</div>
+		</div>
+	</body>
+</html>
