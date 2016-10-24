@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Inscrição do Centro Interesse</title>
-<link href="bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link href="../bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap-3.3.6/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
 <script>
 	function SomenteNumero(e) {
 		var tecla = (window.event) ? event.keyCode : e.which;

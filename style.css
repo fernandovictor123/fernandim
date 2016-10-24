@@ -18,6 +18,16 @@
 	border-width: 1px;
 	font-family: "Bradley Hand ITC";
 }
+#container-login{
+	background-color: red;
+	width: 80%;
+	height: 95%;
+	margin: 0px auto 0px auto;
+	border-color: white;
+	border-style: solid;
+	border-width: 1px;
+	font-family: "Glyphicons Halflings";
+}
 #container-tres{
 	background-color: white;
 	width: 100%;
