@@ -105,11 +105,9 @@
 			</h2>
 			<h2>
 				<button type="reset" class="btn btn-danger">
-					<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>CANCELAR
-				</button>
+					<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>CANCELAR</button>
 				<button type="submit" class="btn btn-success">
-					<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>CONFIRMAR
-				</button>
+					<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>CONFIRMAR</button>
 			</h2>
 
 		</form>

@@ -1,4 +1,4 @@
-#container-um{
+#container-um {
 	background-image: url(images.jpg);
 	width: 80%;
 	height: 95%;
@@ -8,30 +8,10 @@
 	border-width: 1px;
 	font-family: "Glyphicons Halflings";
 }
-#container-dois{
+#container-dois {
 	background-image: url(images.jpg);
 	width: 95%;
 	height: 15%;
-	margin: 0px auto 0px auto;
-	border-color: black;
-	border-style: solid;
-	border-width: 1px;
-	font-family: "Bradley Hand ITC";
-}
-#container-login{
-	background-color: red;
-	width: 80%;
-	height: 95%;
-	margin: 0px auto 0px auto;
-	border-color: white;
-	border-style: solid;
-	border-width: 1px;
-	font-family: "Glyphicons Halflings";
-}
-#container-tres{
-	background-color: white;
-	width: 100%;
-	height: 100%;
 	margin: 0px auto 0px auto;
 	border-color: white;
 	border-style: solid;
@@ -39,7 +19,28 @@
 	font-family: "Glyphicons Halflings";
 	text-align: center;
 }
-#container-quatro{
+#container-login {
+	background-color: purple;
+	width: 80%;
+	height: 95%;
+	margin: 0px auto 0px auto;
+	border-color: black;
+	border-style: double;
+	border-width: 10px;
+	font-family: "Glyphicons Halflings";
+}
+#container-tres {
+	background-color: white;
+	width: 700px;
+	height: 100px;
+	margin: 0px auto 0px auto;
+	border-color: white;
+	border-style: solid;
+	border-width: 1px;
+	font-family: "Glyphicons Halflings";
+	text-align: center;
+}
+#container-quatro {
 	background-color: white;
 	width: 95%;
 	height: 80%;
@@ -50,28 +51,42 @@
 	font-family: "Glyphicons Halflings";
 	text-align: center;
 }
+#sizing-addon1 {
+	color: black;
+	font-family: "Glyphicons Halflings";
+	font-size: 18px;
+	text-align: center;
+}
+#button {
+	font-family: "Glyphicons Halflings";
+	font-size: 16px;
+	text-align: center;
+}
+input::-webkit-input-placeholder {
+	color: black;
+	font-family: "Glyphicons Halflings";
+	font-size: 18px;
+}
 body {
 	background-color: black;
 	font-family: "Glyphicons Halflings";
 }
-
 h1 {
 	color: black;
 	font-family: "Bradley Hand ITC";
 	font-size: 40px;
 	text-align: center;
 }
-input::-webkit-input-placeholder{
-	color: black;
-	font-family: "Glyphicons Halflings";
-	font-size: 13px;
-}
 h2 {
 	font-family: "Glyphicons Halflings";
 	font-size: 15px;
 	text-align: center;
 }
-
+h3 {
+	font-family: "times new roman";
+	font-size: 40px;
+	text-align: center;
+}
 input#txt_nome{
 	width: 100%;
 	font-size: 15px;

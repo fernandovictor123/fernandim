@@ -1,23 +1,49 @@
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>Inscrição do Centro Interesse</title>
-		<link href="../bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
-		<script src="../bootstrap-3.3.6/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="../style.css" />
-	</head>
-	<body>
-		<div id="container-login" class="thumbnail">
-			<h1>LOGIN DO FORMULARIO</h1>
-			<br><br><br>
-			<div class="input-group input-group-lg">
-		  		<span class="input-group-addon" id="sizing-addon1">Usuario</span>
-		  		<input type="text" class="form-control" placeholder="insira seu usuario..." aria-describedby="sizing-addon1">
-			</div><br><br>
-			<div class="input-group input-group-lg">
-		  		<span class="input-group-addon" id="sizing-addon1">Senha</span>
-		  		<input type="text" class="form-control" placeholder="insira sua senha..." aria-describedby="sizing-addon1">
-			</div>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Inscrição do Centro Interesse</title>
+<link href="../bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<script src="../bootstrap-3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<body>
+	<div id="container-login" class="thumbnail">
+		<div id="container-tres" class="thumbnail">
+			<h3>LOGIN DO FORMULARIO</h3>
 		</div>
-	</body>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<form action="conferirlogin.php" method="POST">
+			<div class="input-group input-group-lg">
+				<span class="input-group-addon" id="sizing-addon1">USUARIO</span> <input
+					type="text" class="form-control" name="usuario"
+					placeholder="INSIRA SEU USUARIO..."
+					aria-describedby="sizing-addon1" required />
+			</div>
+			<br>
+			<br>
+			<div class="input-group input-group-lg">
+				<span class="input-group-addon" id="sizing-addon1">SENHA</span> <input
+					type="password" class="form-control" name="senha"
+					placeholder="INSIRA SUA SENHA..." aria-describedby="sizing-addon1"
+					required />
+			</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<h2>
+			<button type="reset" class="btn btn-danger">
+				<span class="glyphicon glyphicon-remove" aria-hidden="true" id="button"></span>CANCELAR
+			</button>
+			<button type="submit" class="btn btn-success">
+				<span class="glyphicon glyphicon-ok" aria-hidden="true" id="button"></span>CONFIRMAR
+			</button>
+			</h2>
+		</form>
+	</div>
+</body>
 </html>
