@@ -29,7 +29,7 @@
 	border-width: 10px;
 	font-family: "Glyphicons Halflings";
 }
-#container-tres {
+container-tres {
 	background-color: white;
 	width: 700px;
 	height: 100px;
@@ -52,9 +52,8 @@
 	text-align: center;
 }
 #sizing-addon1 {
-	color: black;
-	font-family: "Glyphicons Halflings";
-	font-size: 18px;
+	border-width: 0px;
+	width: 30%;
 	text-align: center;
 }
 #button {
