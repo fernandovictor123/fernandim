@@ -13,48 +13,48 @@
 	width: 95%;
 	height: 15%;
 	margin: 0px auto 0px auto;
-	border-color: white;
+	border-color: red;
 	border-style: solid;
 	border-width: 1px;
 	font-family: "Glyphicons Halflings";
 	text-align: center;
 }
 #container-login {
-	background-color: purple;
+	background-color: White;
 	width: 80%;
-	height: 95%;
+	/* height: 100%; */
 	margin: 0px auto 0px auto;
-	border-color: black;
+	border-color: red;
 	border-style: double;
 	border-width: 10px;
 	font-family: "Glyphicons Halflings";
 }
 container-tres {
-	background-color: white;
-	width: 700px;
-	height: 100px;
+	width: 80%;
 	margin: 0px auto 0px auto;
-	border-color: white;
+	border: 3px double #990000; 
 	border-style: solid;
-	border-width: 1px;
-	font-family: "Glyphicons Halflings";
-	text-align: center;
+	border-width: 5px;
 }
 #container-quatro {
 	background-color: white;
 	width: 95%;
 	height: 80%;
 	margin: 0px auto 0px auto;
-	border-color: black;
+	border-color: White;
 	border-style: solid;
 	border-width: 1px;
 	font-family: "Glyphicons Halflings";
 	text-align: center;
 }
+#css{
+	margin: 0px auto 0px auto;
+	width: 50%;
+}
 #sizing-addon1 {
-	border-width: 0px;
-	width: 30%;
-	text-align: center;
+	text-align:center; 
+	width: 100px;
+	margin: 100 auto;
 }
 #button {
 	font-family: "Glyphicons Halflings";
@@ -67,7 +67,120 @@ input::-webkit-input-placeholder {
 	font-size: 18px;
 }
 body {
-	background-color: black;
+	background-color: white;
+	font-family: "Glyphicons Halflings";
+}
+h1 {
+	color: black;
+	font-family: "Bradley Hand ITC";
+	font-size: 40px;
+	text-align: center;
+}
+h2 {
+	font-family: "Glyphicons Halflings";
+	font-size: 15px;
+	text-align: center;
+}
+h3 {
+	font-family: "times new roman";
+	font-size: 40px;
+	text-align: center;
+}
+input#txt_nome{
+	width: 100%;
+	font-size: 15px;
+	font-family: "Glyphicons Halflings";
+}
+input#txt_codigo{
+	width: 100%;
+	font-size: 15px;
+	font-family: "Glyphicons Halflings";
+}
+input#txt_email{
+	width: 100%;
+	font-size: 15px;
+	font-family: "Glyphicons Halflings";
+}
+select#centrodeinsteresse-um{
+	width: 100%;
+	font-size: 15px;
+	font-family: "Glyphicons Halflings";
+}
+select#centrodeinsteresse-dois{
+	width: 100%;
+	font-size: 15px;
+	font-family: "Glyphicons Halflings";
+}#container-um {
+	background-image: url(images.jpg);
+	width: 80%;
+	height: 95%;
+	margin: 0px auto 0px auto;
+	border-color: white;
+	border-style: solid;
+	border-width: 1px;
+	font-family: "Glyphicons Halflings";
+}
+#container-dois {
+	background-image: url(images.jpg);
+	width: 95%;
+	height: 15%;
+	margin: 0px auto 0px auto;
+	border-color: red;
+	border-style: solid;
+	border-width: 1px;
+	font-family: "Glyphicons Halflings";
+	text-align: center;
+}
+#container-login {
+	background-color: White;
+	width: 80%;
+	/* height: 100%; */
+	margin: 0px auto 0px auto;
+	border-color: red;
+	border-style: double;
+	border-width: 10px;
+	font-family: "Glyphicons Halflings";
+}
+container-tres {
+	width: 80%;
+	margin: 0px auto 0px auto;
+	border: 3px double #990000; 
+	border-style: solid;
+	border-width: 5px;
+}
+#container-quatro {
+	background-color: white;
+	width: 95%;
+	height: 80%;
+	margin: 0px auto 0px auto;
+	border-color: White;
+	border-style: solid;
+	border-width: 1px;
+	font-family: "Glyphicons Halflings";
+	text-align: center;
+}
+#css{
+	margin: 100px auto 100px auto;
+	width: 50%;
+	
+}
+#sizing-addon1 {
+	text-align:center; 
+	width: 170px;
+	margin: 100 auto;
+}
+#button {
+	font-family: "Glyphicons Halflings";
+	font-size: 16px;
+	text-align: center;
+}
+input::-webkit-input-placeholder {
+	color: black;
+	font-family: "Glyphicons Halflings";
+	font-size: 18px;
+}
+body {
+	background-color: white;
 	font-family: "Glyphicons Halflings";
 }
 h1 {

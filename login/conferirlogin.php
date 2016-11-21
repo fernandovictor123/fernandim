@@ -1,50 +1,33 @@
 <?php
+	// session_start inicia a sessão
+	session_start();
 
-	
-	$servidor = "localhost";
-	$usuario = "root";
-	$senha = "";
-	
-	$nome_banco = "bd_login";
-	
-	$conexao = mysql_connect($servidor, $usuario, $senha);
-	
-	if (!$conexao) {
-		echo "Não foi possível connectar ao servidor";
-		exit;
-	}else{
-		"<h1>Conectou</h1>";
-	}
-	
-	$banco = mysql_select_db($nome_banco, $conexao) or die ("Não foi possível conectar ao banco de dados");
-	
+	include '../conexao.php';
+
 	
 	$usuario= $_POST['usuario'];
-	$senha=  $_POST['senha'];
+	$senha=  md5($_POST['senha']);
 	
-	$comandosql = "SELECT * FROM usuario WHERE nome='$usuario' and senha='$senha';";
+	var_dump($_POST);
+	echo $senha;
 	
-	$comandosql;
+	$comandosql = "SELECT * FROM tb_usuario WHERE login='$usuario' and senha='$senha'";
+	
 	$resultado = mysql_query($comandosql);
 	
-
 	
-	if (mysql_errno()) {
-		$error = "MySQL error ".mysql_errno().": ".mysql_error()."\n<br>Quando executou:<br>\n$comandosql\n<br>";
-		echo $error;
+	
+	if(mysql_num_rows ($resultado) > 0 )
+	{
+		$_SESSION['usuario'] = $usuario;
+		$_SESSION['senha'] = $senha;
+		header('location:../inscricao.php');
 	}
-	$itembancodados = mysql_fetch_array($resultado);
-
-	$usuario = $itembancodados['ID_USUARIO'];
+	else{
+		unset ($_SESSION['usuario']);
+		unset ($_SESSION['senha']);
+		header('location:index.html');
 	
-	
-	
-	if ($usuario > 0){
-		echo "<h1>Deu certo</h1>";
-		echo "<a href='inscricao.php'>Clique aqui para voltar</a>";
-		
-	}else{
-		echo "<h1>Não Deu certo</h1>";
-		echo "<a href='inscricao.php'>Clique aqui para voltar</a>";
 	}
+	
 ?>
